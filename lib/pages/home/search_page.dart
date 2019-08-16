@@ -26,7 +26,7 @@ class SearchPageState extends State<SearchPage> {
             child: new TextField(
               autofocus: true,
               decoration: new InputDecoration.collapsed(
-                  hintText: "搜索比乎内容",
+                  hintText: "搜索话题/昵称/ID",
                   hintStyle: new TextStyle(color: GlobalConfig.fontColor)
               ),
             ),
@@ -47,12 +47,13 @@ class SearchPageState extends State<SearchPage> {
         home: new Scaffold(
           appBar: new AppBar(
             title: searchInput(),
+            backgroundColor: Colors.lightBlue,
           ),
           body: new SingleChildScrollView(
             child: new Column(
               children: <Widget>[
                 new Container(
-                  child: new Text("比乎热搜", style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0)),
+                  child: new Text("泥谭热搜", style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0)),
                   margin: const EdgeInsets.only(top: 16.0, left: 16.0, bottom: 16.0),
                   alignment: Alignment.topLeft,
                 ),
@@ -60,15 +61,15 @@ class SearchPageState extends State<SearchPage> {
                   children: <Widget>[
                     new Container(
                       child: new Chip(
-                        label: new FlatButton(onPressed: (){}, child: new Text("汽车关税下调",style: new TextStyle(color: GlobalConfig.fontColor),)),
-                        backgroundColor: GlobalConfig.dark == true ? Colors.white10 : Colors.black12,
+                        label: new FlatButton(onPressed: (){}, child: new Text("碎碎念",style: new TextStyle(color: GlobalConfig.fontColor),)),
+                        backgroundColor: Colors.black12,
                       ),
                       margin: const EdgeInsets.only(left: 16.0, bottom: 16.0),
                       alignment: Alignment.topLeft,
                     ),
                     new Container(
                       child: new Chip(
-                        label: new FlatButton(onPressed: (){}, child: new Text("李彦宏传闻辟谣",style: new TextStyle(color: GlobalConfig.fontColor))),
+                        label: new FlatButton(onPressed: (){}, child: new Text("生活中的刺",style: new TextStyle(color: GlobalConfig.fontColor))),
                         backgroundColor: GlobalConfig.dark == true ? Colors.white10 : Colors.black12,
                       ),
                       margin: const EdgeInsets.only(left: 16.0, bottom: 16.0),
@@ -80,7 +81,7 @@ class SearchPageState extends State<SearchPage> {
                   children: <Widget>[
                     new Container(
                       child: new Chip(
-                        label: new FlatButton(onPressed: (){}, child: new Text("小米8",style: new TextStyle(color: GlobalConfig.fontColor))),
+                        label: new FlatButton(onPressed: (){}, child: new Text("美好的相遇",style: new TextStyle(color: GlobalConfig.fontColor))),
                         backgroundColor: GlobalConfig.dark == true ? Colors.white10 : Colors.black12,
                       ),
                       margin: const EdgeInsets.only(left: 16.0, bottom: 16.0),
@@ -88,7 +89,7 @@ class SearchPageState extends State<SearchPage> {
                     ),
                     new Container(
                       child: new Chip(
-                        label: new FlatButton(onPressed: (){}, child: new Text("超时空同居",style: new TextStyle(color: GlobalConfig.fontColor))),
+                        label: new FlatButton(onPressed: (){}, child: new Text("地球都有对象了",style: new TextStyle(color: GlobalConfig.fontColor))),
                         backgroundColor: GlobalConfig.dark == true ? Colors.white10 : Colors.black12,
                       ),
                       margin: const EdgeInsets.only(left: 16.0, bottom: 16.0),

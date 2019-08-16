@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../global_config.dart';
-import 'ask_page.dart';
+import 'package:mud_speak/pages/topic/create_topic_page.dart';
 import 'friend_card.dart';
 import 'recommend_card.dart';
 import 'hot_card.dart';
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {
-                  return new AskPage();
+                  return new CreateTopicPage();
                 }));
               },
               icon: new Icon(Icons.border_color,
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
             unselectedLabelColor: Colors.black54,
             indicatorColor: Colors.blue,
             tabs: [
-              new Tab(text: "欢喜"),
+              new Tab(text: "推荐"),
               new Tab(text: "好友"),
               new Tab(text: "热门"),
             ],

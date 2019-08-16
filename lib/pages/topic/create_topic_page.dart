@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../global_config.dart';
 
-class AskPage extends StatefulWidget {
+class CreateTopicPage extends StatefulWidget {
 
   @override
-  AskPageState createState() => new AskPageState();
+  _CreateTopicPageState createState() => new _CreateTopicPageState();
 }
 
-class AskPageState extends State<AskPage> {
+class _CreateTopicPageState extends State<CreateTopicPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class AskPageState extends State<AskPage> {
                 ),
                 new Expanded(
                   child: new Container(
-                    child: new Text("提问"),
+                    child: new Text("创建话题"),
                   )
                 ),
                 new FlatButton(
