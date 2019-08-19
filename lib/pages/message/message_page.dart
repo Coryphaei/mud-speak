@@ -11,6 +11,6 @@ class MessagePage extends StatefulWidget {
 class _MessagePage extends State<MessagePage>{
   @override
   Widget build(BuildContext context) {
-    return new Text("个人中心");
+    return new Text("消息中心");
   }
 }

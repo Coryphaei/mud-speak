@@ -3,7 +3,7 @@ import 'navigation_icon_view.dart';
 import '../../global_config.dart';
 import '../home/home_page.dart';
 import '../message/message_page.dart';
-import '../topic/topic_page.dart';
+import '../topic/topic_list_page.dart';
 import '../my/my_page.dart';
 
 class Index extends StatefulWidget {

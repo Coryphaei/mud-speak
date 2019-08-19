@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mud_speak/model/topic_card.dart';
+import 'package:mud_speak/pages/topic/card_detail_page.dart';
 
 import '../../global_config.dart';
 
@@ -23,7 +24,10 @@ class _RecommendCardState extends State<RecommendCard> {
             topicCard(cards[2]),
             topicCard(cards[3]),
             topicCard(cards[4]),
-            topicCard(cards[5])
+            topicCard(cards[5]),
+            topicCard(cards[6]),
+            topicCard(cards[7]),
+            topicCard(cards[8])
           ],
         ),
       ),
@@ -73,7 +77,7 @@ class _RecommendCardState extends State<RecommendCard> {
           onPressed: (){
             Navigator.of(context).push(new MaterialPageRoute(
                 builder: (context) {
-                  return null;
+                  return new CardDetailPage();
                 }
             ));
           },
