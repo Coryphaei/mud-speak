@@ -7,13 +7,11 @@ import '../topic/topic_list_page.dart';
 import '../my/my_page.dart';
 
 class Index extends StatefulWidget {
-
   @override
   State<Index> createState() => new _IndexState();
 }
 
-class _IndexState extends State<Index> with TickerProviderStateMixin{
-
+class _IndexState extends State<Index> with TickerProviderStateMixin {
   int _currentIndex = 0;
   List<NavigationIconView> _navigationViews;
   List<StatefulWidget> _pageList;
@@ -60,7 +58,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
   }
 
   void _rebuild() {
-    setState((){});
+    setState(() {});
   }
 
   @override
@@ -75,30 +73,26 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
   Widget build(BuildContext context) {
     final BottomNavigationBar bottomNavigationBar = new BottomNavigationBar(
         items: _navigationViews
-            .map((NavigationIconView navigationIconView) => navigationIconView.item)
+            .map((NavigationIconView navigationIconView) =>
+                navigationIconView.item)
             .toList(),
         currentIndex: _currentIndex,
         fixedColor: Colors.lightBlue,
         type: BottomNavigationBarType.fixed,
         onTap: (int index) {
-          setState((){
+          setState(() {
             _navigationViews[_currentIndex].controller.reverse();
             _currentIndex = index;
             _navigationViews[_currentIndex].controller.forward();
             _currentPage = _pageList[_currentIndex];
           });
-        }
-    );
+        });
 
     return new MaterialApp(
         home: new Scaffold(
-          body: new Center(
-              child: _currentPage
-          ),
+          body: new Center(child: _currentPage),
           bottomNavigationBar: bottomNavigationBar,
         ),
-        theme: GlobalConfig.themeData
-    );
+        theme: GlobalConfig.themeData);
   }
-
 }

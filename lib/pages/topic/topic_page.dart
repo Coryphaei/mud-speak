@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import '../../global_config.dart';
 import 'card_detail_page.dart';
+import '../layout/search_header.dart';
 
-class QuestionPage extends StatefulWidget {
+class TopicPage extends StatefulWidget {
   @override
-  QuestionPageState createState() => new QuestionPageState();
+  TopicPageState createState() => new TopicPageState();
 
 }
 
-class QuestionPageState extends State<QuestionPage> {
+//话题页
+class TopicPageState extends State<TopicPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class QuestionPageState extends State<QuestionPage> {
       theme: GlobalConfig.themeData,
       home: new Scaffold(
         appBar: new AppBar(
-            title: Common.searchInput(context)
+            title: SearchHeader.searchInput(context)
         ),
         body: new SingleChildScrollView(
           child: new Column(

@@ -15,7 +15,6 @@ class _HomePageState extends State<HomePage> {
   Widget barSearch() {
     return new Container(
         child: new Row(
-
           children: <Widget>[
             new Expanded(
                 child: new FlatButton.icon(
